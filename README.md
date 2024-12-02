@@ -9,7 +9,7 @@ A Python utility that automatically organizes files in the current directory int
 This application scans the directory where it's run and automatically sorts files into appropriate folders based on their file types. It helps keep your directories clean and organized by categorizing files into the following folders:
 
 - **docs** - Documents (`.pdf`, `.docx`, `.txt`, `.pptx`, `.xlsx`, `.csv`, `.ppt`, `.doc`, `.xls`)
-- **images** - Image files (`.png`, `.jpg`, `.jpeg`, `.webp`, `.gif`, `.bmp`, `.svg`)
+- **images** - Image files (`.png`, `.jpg`, `.jpeg`, `.webp`, `.gif`, `.bmp`, `.svg`, `.ico`, `.tiff`, `.tif`)
 - **videos** - Video files (`.mp4`, `.avi`, `.mkv`, `.m4a`, `.flv`, `.mov`, `.wmv`)
 - **archives** - Compressed files (`.zip`, `.rar`, `.7z`)
 - **music** - Audio files (`.mp3`, `.wav`, `.flac`)
@@ -40,3 +40,12 @@ This application scans the directory where it's run and automatically sorts file
 - No additional requirements for the executable version
 - Python 3.6+ (if running from source)
 
+## Building from Source
+
+To build the executable (run this in the root):
+
+```sh
+pyinstaller --noconfirm --onefile --windowed --icon "subfolder.ico"  "organize.py"
+```
+
+This will create a standalone executable using PyInstaller.
