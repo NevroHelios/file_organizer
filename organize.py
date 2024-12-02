@@ -80,6 +80,16 @@ def move_files(files_dict: Dict[str, List[str]]) -> None:
                 logging.info(f"Moved {file_name} to {target_path}")
             except Exception as e:
                 logging.error(f"Error moving {file_name}: {str(e)}")
+                
+    # remove thee empty directories
+    for item in os.listdir(APPLICATION_PATH):
+        item_path = os.path.join(APPLICATION_PATH, item)
+        if os.path.isdir(item_path) and not os.listdir(item_path):
+            try:
+                os.rmdir(item_path)
+                logging.info(f"Removed empty directory: {item}")
+            except Exception as e:
+                logging.error(f"Error removing directory {item}: {str(e)}")
 
 def main():
     setup_logging()

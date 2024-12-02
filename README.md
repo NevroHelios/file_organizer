@@ -45,7 +45,7 @@ This application scans the directory where it's run and automatically sorts file
 To build the executable (run this in the root):
 
 ```sh
-pyinstaller --noconfirm --onefile --windowed --icon "subfolder.ico"  "organize.py"
+pyinstaller --noconfirm --onefile --windowed --icon "icon.ico"  "organize.py"
 ```
 
 This will create a standalone executable using PyInstaller.
