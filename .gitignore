@@ -1,0 +1,5 @@
+*.ico
+*.spec
+*.py
+*.svg
+build/
